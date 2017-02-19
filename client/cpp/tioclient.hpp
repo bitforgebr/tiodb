@@ -508,7 +508,7 @@ namespace tio
 
 
 			template<typename TConnection>
-			void create(TConnection* cn, const string& name, const string& type = "")
+			void create(TConnection* cn, const string& name, const string& type)
 			{
 				int result;
 
