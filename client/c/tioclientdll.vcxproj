@@ -154,8 +154,9 @@
     <ClCompile Include="tioclient.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\cpp\tioclient.hpp" />
+    <ClInclude Include="..\cpp\tioclient_async.hpp" />
     <ClInclude Include="tioclient.h" />
-    <ClInclude Include="tioclient.hpp" />
     <ClInclude Include="tioclient_internals.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
