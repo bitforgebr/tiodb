@@ -548,7 +548,7 @@ namespace tio
 				if(value->data_type != TIO_DATA_TYPE_NONE)
 					FromTioData(value, &typedValue);
 				
-				me->eventCallback_(container_name, "event", typedKey, typedValue);
+				me->eventCallback_(container_name, std::to_string(event_code), typedKey, typedValue);
 			}
 
 			// typedef void (*event_callback_t)(void* /*cookie*/, const char* /*group_name*/, const char* /*container_name*/, unsigned int /*handle*/, unsigned int /*event_code*/, const struct TIO_DATA*, const struct TIO_DATA*, const struct TIO_DATA*);
