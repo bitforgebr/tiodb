@@ -116,5 +116,38 @@ namespace TioExplorer
         {
             GC.Collect();
         }
+
+        private void itemsListView_KeyUp(object sender, KeyEventArgs e)
+        {
+        }
+
+        private void itemsListView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if( e.Control && e.KeyCode == Keys.C )
+            {
+                String txt = "";
+                foreach( ListViewItem i in itemsListView.SelectedItems )
+                {
+                    String nextTxt = i.Text;
+                    if (i.SubItems.Count > 1)
+                        nextTxt = nextTxt + ": " + i.SubItems[1].Text;
+                    if (txt == "")
+                        txt = nextTxt;
+                    else
+                        txt = txt + "\n" + nextTxt;
+                }
+                MessageBox.Show(txt);
+            }
+            else if( e.Control && e.KeyCode == Keys.A )
+            {
+                foreach (ListViewItem item in itemsListView.Items)
+                    item.Selected = true;
+            }
+        }
+
+        private void itemsListView_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

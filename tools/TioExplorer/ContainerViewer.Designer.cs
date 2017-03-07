@@ -53,6 +53,9 @@
             this.itemsListView.TabIndex = 0;
             this.itemsListView.UseCompatibleStateImageBehavior = false;
             this.itemsListView.View = System.Windows.Forms.View.Details;
+            this.itemsListView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.itemsListView_KeyDown);
+            this.itemsListView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.itemsListView_KeyPress);
+            this.itemsListView.KeyUp += new System.Windows.Forms.KeyEventHandler(this.itemsListView_KeyUp);
             // 
             // columnHeader1
             // 
